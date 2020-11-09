@@ -1,0 +1,49 @@
+npm init -y
+
+npm install webpack webpack-cli --save-dev 
+    no va air a produccion
+ 
+npm install -D html-loader html-webpack-plugin 
+    instala el bundle en el dist
+
+npm install i -D webpack-dev-server
+    colocar en el package.json/scripts/start: "webpack serve"
+
+para css:
+npm i -D css-loader style-loader
+
+para importaciones globales css styles.css:
+npm i -D mini-css-extract-plugin
+
+para minimizar el css
+npm i -D optimize-css-assets-webpack-plugin
+
+para img:
+npm i -D file-loader
+
+para copiar los files del asstes to dist:
+npm i copy-webpack-plugin --save-dev
+
+para produccion, pre-produccion, y development en mi package.json
+"build": "webpack --config webpack.prod.js",
+"build:dev": "webpack --config webpack.config.js",
+"start": "webpack serve"
+
+para instalar babel, ir a la pagina oficial babel js en webpack
+
+.babelrc es un archivo oculto
+
+babel-preset-minify: https://babeljs.io/docs/en/babel-preset-minify
+
+para babel-minify-webpack-plugin: https://github.com/webpack-contrib/babel-minify-webpack-plugin
+
+para babel-preset-env: https://babeljs.io/docs/en/babel-preset-env
+
+para limpiar el dist: https://webpack.js.org/guides/output-management/#cleaning-up-the-dist-folder
+    no olvidar colocar el path para que funcione
+
+para guthub
+git init es para preparar el proyecto que lo voy a subir
+creo el .gitignore
+
+git add .
