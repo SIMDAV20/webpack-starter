@@ -2,7 +2,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin'); // para las imagenes
 
 module.exports = {
 
@@ -17,16 +17,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/i,
-                exclude: /styles\.css$/i,
+                test: /\.css$/,
+                exclude: /styles\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /styles\.css$/i,
+                test: /styles\.css$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
             {
-                test: /\.html$/i,
+                test: /\.html$/,
                 loader: 'html-loader',
                 options: {
                     attributes: false,
@@ -34,7 +34,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.(png|svg|jpg|gif)$/i,
+                test: /\.(png|svg|jpg|gif)$/,
                 use: [
                     {
                         loader: 'file-loader',
