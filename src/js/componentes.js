@@ -1,4 +1,5 @@
 import "../css/componentes.css";
+import googleLogo from '../assets/img/google.jpg';
 
 export const saludar = ( nombre ) => {
 
@@ -9,5 +10,12 @@ export const saludar = ( nombre ) => {
     h1.innerText = `Hola, ${ nombre }, como estas?`;
 
     document.body.append( h1 );
+
+    //IMG
+
+    console.log(googleLogo);
+    const img = document.createElement('img');
+    img.src = googleLogo;
+    document.body.append( img );
 
 }

@@ -6,8 +6,8 @@ npm install webpack webpack-cli --save-dev
 npm install -D html-loader html-webpack-plugin 
     instala el bundle en el dist
 
-npm install i -D webpack-dev-server
-    colocar en el package.json/scripts/start: "webpack serve"
+npm i -D webpack-dev-server
+    colocar en el package.json/scripts/"serve": "webpack serve --config webpack.config.js --open --port=8080"
 
 para css:
 npm i -D css-loader style-loader
@@ -45,5 +45,4 @@ para limpiar el dist: https://webpack.js.org/guides/output-management/#cleaning-
 para guthub
 git init es para preparar el proyecto que lo voy a subir
 creo el .gitignore
-
 git add .
